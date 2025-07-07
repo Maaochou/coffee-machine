@@ -13,7 +13,7 @@ import kotlin.test.assertEquals
 
 class ProcessOrderWithPricesTest {
     val orderProcessor: ProcessOrder = OrderProcessor(
-        DrinkMaker(),
+        DrinkMaker(DrinkMakerProtocolCodecImpl()),
         DrinkMakerProtocolCodecImpl(), mapOf(
             DrinkType.T to 0.4.toBigDecimal(),
             DrinkType.C to 0.6.toBigDecimal(),

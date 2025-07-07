@@ -10,9 +10,7 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class MakeDrinkWithAddedDrinksTest {
-    val drinkMaker: MakeDrink = DrinkMaker(
-        DrinkMakerProtocolCodecImpl()
-    )
+    val drinkMaker: MakeDrink = DrinkMaker(DrinkMakerProtocolCodecImpl())
 
     @Test
     fun drink_maker_makes_1_orange_juice() {

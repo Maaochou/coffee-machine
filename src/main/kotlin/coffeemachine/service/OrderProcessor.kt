@@ -5,8 +5,8 @@ import coffeemachine.domain.Order
 import java.math.BigDecimal
 
 class OrderProcessor(
-    val makeDrink: MakeDrink = DrinkMaker(),
-    val drinkMakerProtocolCodec: DrinkMakerProtocolCodec = DrinkMakerProtocolCodecImpl(),
+    val makeDrink: MakeDrink,
+    val drinkMakerProtocolCodec: DrinkMakerProtocolCodec,
     val drinkPrices: Map<DrinkType, BigDecimal> = mapOf(
         DrinkType.T to 0.4.toBigDecimal(),
         DrinkType.C to 0.6.toBigDecimal(),

@@ -5,7 +5,7 @@ import coffeemachine.domain.Order
 import java.math.BigDecimal
 
 class DrinkMaker(
-    val drinkMakerProtocolCodec: DrinkMakerProtocolCodec = DrinkMakerProtocolCodecImpl()
+    val drinkMakerProtocolCodec: DrinkMakerProtocolCodec
 ) : MakeDrink {
 
     override fun processInstructions(instructions: String, paidAmount: BigDecimal): Any {

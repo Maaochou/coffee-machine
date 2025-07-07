@@ -3,13 +3,14 @@ package coffeemachine
 import coffeemachine.domain.Drink
 import coffeemachine.domain.DrinkType
 import coffeemachine.service.DrinkMaker
+import coffeemachine.service.DrinkMakerProtocolCodecImpl
 import coffeemachine.service.MakeDrink
 import org.junit.jupiter.api.Assertions.assertThrows
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class MakeDrinkTest {
-    val drinkMaker: MakeDrink = DrinkMaker()
+    val drinkMaker: MakeDrink = DrinkMaker(DrinkMakerProtocolCodecImpl())
 
     @Test
     fun drink_maker_makes_1_tea_with_1_sugar_and_a_stick() {
