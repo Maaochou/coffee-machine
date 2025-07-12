@@ -1,4 +1,4 @@
-package coffeemachine
+package coffeemachine.service
 
 import prep.mao.coffeemachine.DrinkType
 import java.math.BigDecimal

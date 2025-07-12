@@ -1,5 +1,7 @@
 package coffeemachine
 
+import coffeemachine.service.DrinkMaker
+import coffeemachine.service.PriceChecker
 import prep.mao.coffeemachine.*
 import java.math.BigDecimal
 import kotlin.test.Test

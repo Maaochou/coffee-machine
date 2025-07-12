@@ -1,9 +1,9 @@
 package prep.mao.coffeemachine
 
-import coffeemachine.CheckPrice
-import coffeemachine.DrinkMaker
-import coffeemachine.MakeDrink
-import coffeemachine.PriceChecker
+import coffeemachine.service.CheckPrice
+import coffeemachine.service.DrinkMaker
+import coffeemachine.service.MakeDrink
+import coffeemachine.service.PriceChecker
 
 class OrderTaker(
     val drinkMakerProtocolTranslator: TranslateDrinkMakerProtocol = DrinkMakerProtocolTranslator(),

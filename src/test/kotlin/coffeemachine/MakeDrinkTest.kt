@@ -1,5 +1,7 @@
 package coffeemachine
 
+import coffeemachine.service.DrinkMaker
+import coffeemachine.service.MakeDrink
 import org.junit.jupiter.api.Assertions.assertThrows
 import kotlin.test.Test
 import kotlin.test.assertEquals
