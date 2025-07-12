@@ -1,5 +1,5 @@
 package coffeemachine
 
 interface MakeDrink {
-    fun processCommand(command : String):String
+    fun processCommand(command: String): String
 }

@@ -75,4 +75,60 @@ class MakeDrinkTest {
             "Invalid stick and sugar combination"
         )
     }
+
+    @Test
+    fun `drink maker should make an extra hot tea with 1 sugar and a stick`() {
+        // Given
+        val command = "Th:1:0"
+        // When
+        val result = drinkMaker.processCommand(command)
+        // Then
+        val expected = "Drink maker makes 1 tea with 1 sugar and a stick"
+        assertEquals(expected, result)
+    }
+
+    @Test
+    fun `drink maker should make an extra hot chocolate with no sugar and no stick`() {
+        // Given
+        val command = "Hh::"
+        // When
+        val result = drinkMaker.processCommand(command)
+        // Then
+        val expected = "Drink maker makes 1 chocolate with no sugar"
+        assertEquals(expected, result)
+    }
+
+    @Test
+    fun `drink maker should make an extra hot coffee with 2 sugars and a stick`() {
+        // Given
+        val command = "Ch:2:0"
+        // When
+        val result = drinkMaker.processCommand(command)
+        // Then
+        val expected = "Drink maker makes 1 coffee with 2 sugars and a stick"
+        assertEquals(expected, result)
+    }
+
+    @Test
+    fun `drink maker should make one orange juice`() {
+        // Given
+        val command = "O::"
+        // When
+        val result = drinkMaker.processCommand(command)
+        // Then
+        val expected = "Drink maker makes 1 orange juice with no sugar"
+        assertEquals(expected, result)
+    }
+
+    @Test
+    fun `drink maker should throw an exception when making one extra hot orange juice`() {
+        // Given
+        val command = "Oh::"
+        // When // Then
+        assertThrows(
+            IllegalArgumentException::class.java,
+            { drinkMaker.processCommand(command) },
+            "Invalid drink type and extra hot option combination"
+        )
+    }
 }

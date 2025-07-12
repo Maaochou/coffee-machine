@@ -35,7 +35,7 @@ class TakeOrderTest {
     @Test
     fun `should make tea with 1 sugar and a stick when paying exactly the asked price 0_4`() {
         // Given
-        val order = Order(DrinkType.Tea, 1,true, paidAmount = 0.4.toBigDecimal())
+        val order = Order(DrinkType.Tea, 1, true, paidAmount = 0.4.toBigDecimal())
         //When
         val result = takeOrder.takeOrder(order)
         //Then

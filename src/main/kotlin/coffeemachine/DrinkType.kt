@@ -1,5 +1,5 @@
 package prep.mao.coffeemachine
 
 enum class DrinkType {
-    Coffee, Tea, Chocolate
+    Coffee, Tea, Chocolate, OrangeJuice
 }
