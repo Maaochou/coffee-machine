@@ -5,7 +5,7 @@ import coffeemachine.service.TranslateOrderToDrinkMakerProtocol
 import org.assertj.core.api.Assertions.assertThat
 import kotlin.test.Test
 
-class OrderDrinkMakerProtocolTranslatorTest {
+class TranslateOrderToDrinkMakerProtocolTest {
 
     val translateOrderDrinkMakerProtocol: TranslateOrderToDrinkMakerProtocol = OrderToDrinkMakerProtocolTranslator()
 

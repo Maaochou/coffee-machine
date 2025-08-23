@@ -3,7 +3,7 @@ package coffeemachine
 import org.assertj.core.api.Assertions
 import kotlin.test.Test
 
-class OrderStickTest {
+class OrderStickBehaviorTest {
 
     @Test
     fun `new order with sugar should have a stick`() {
