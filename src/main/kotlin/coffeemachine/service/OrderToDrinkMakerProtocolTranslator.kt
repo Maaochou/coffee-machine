@@ -1,14 +1,22 @@
 package coffeemachine.service
 
 import coffeemachine.Order
+import coffeemachine.helper.DrinkMakerProtocolHelper
 
-class OrderToDrinkMakerProtocolTranslator : TranslateOrderToDrinkMakerProtocol {
+class OrderToDrinkMakerProtocolTranslator(val checkOrderPaidAmount: CheckOrderPaidAmount = OrderPaidAmountChecker()) :
+    TranslateOrderToDrinkMakerProtocol {
+
     override fun translate(order: Order): String {
-        return "${order.drinkType.value}:${if (order.numberOfSugarCubes > 0) order.numberOfSugarCubes else ""}:${if (order.isStickAdded) 0 else ""}"
-    }
 
-    override fun translate(message: String): String {
-        return "M:$message"
+        if (checkOrderPaidAmount.isPaidAmountValid(order)) return DrinkMakerProtocolHelper.formatOrder(order)
+
+        return DrinkMakerProtocolHelper.formatMessage(
+            DrinkMakerProtocolHelper.formatMissingAmount(
+                order.drinkType.price.minus(
+                    order.paidAmount
+                )
+            )
+        )
     }
 
 }
