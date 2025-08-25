@@ -7,7 +7,7 @@ class DrinkMakerProtocolHelper {
 
     companion object {
         fun formatOrder(order: Order): String =
-            "${order.drinkType.value}:${if (order.numberOfSugarCubes > 0) order.numberOfSugarCubes else ""}:${if (order.isStickAdded) 0 else ""}"
+            "${order.drinkType.value}${if (order.isExtraHot) "h" else ""}:${if (order.numberOfSugarCubes > 0) order.numberOfSugarCubes else ""}:${if (order.isStickAdded) 0 else ""}"
 
         fun formatMessage(message: String): String = "M:$message"
 

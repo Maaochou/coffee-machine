@@ -11,7 +11,6 @@ class TranslateOrderToDrinkMakerProtocolPaidAmountTest {
 
     val translateOrderDrinkMakerProtocol: TranslateOrderToDrinkMakerProtocol = OrderToDrinkMakerProtocolTranslator()
 
-
     @Test
     fun `order of tea with one sugar and 0 point 4 paid for tea that cost 0 point 4 should translate to 'T colon 1 colon 0'`() {
         // given

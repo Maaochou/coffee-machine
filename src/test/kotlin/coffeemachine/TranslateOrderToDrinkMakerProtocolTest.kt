@@ -43,4 +43,15 @@ class TranslateOrderToDrinkMakerProtocolTest {
         assertThat(orderInDrinkMakerProtocol).isEqualTo(expected)
     }
 
+    @Test
+    fun `order of orange juice should translate to 'O colon colon'`() {
+        // given
+        val order = Order(DrinkType.ORANGE_JUICE, paidAmount = BigDecimal.ONE)
+        // when
+        val orderInDrinkMakerProtocol = translateOrderDrinkMakerProtocol.translate(order);
+        val expected = "O::"
+        // then
+        assertThat(orderInDrinkMakerProtocol).isEqualTo(expected)
+    }
+
 }
